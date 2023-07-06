@@ -1,0 +1,23 @@
+* {
+  scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
+  -o-scroll-behavior: smooth;
+  -ms-scroll-behavior: smooth;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  background-color: #131720;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+select {
+  outline: 0;
+  border: 0;
+  padding: 5px;
+}

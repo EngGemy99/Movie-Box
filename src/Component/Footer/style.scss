@@ -1,0 +1,124 @@
+//variables
+$basic-dark-color: #212121;
+$basic-light-color: #fff;
+$fb-color: #3b5998;
+$tw-color: #00aced;
+$insta: #cb2027;
+$in: #007bb6;
+$border-radius: 10px;
+$font-size: 25px;
+
+.socail {
+    p {
+        color: #fff;
+        font-size: 20px;
+    }
+}
+/*common styles !!!YOU DON'T NEED THEM */
+
+.effect {
+    &:nth-child(2) {
+        margin-top: 50px;
+    }
+
+    &:nth-child(2n + 1) {
+        background-color: $basic-light-color;
+
+        h2 {
+            color: $basic-dark-color;
+        }
+    }
+
+    .buttons {
+        margin-top: 50px;
+        display: flex;
+    }
+
+    a {
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+}
+
+/*common link styles !!!YOU NEED THEM*/
+.effect {
+    /*display: flex; !!!uncomment this line !!!*/
+
+    a {
+        text-decoration: none !important;
+        color: $basic-light-color;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: $border-radius;
+        margin: 0 20px;
+        font-size: $font-size;
+        overflow: hidden;
+        position: relative;
+
+        i {
+            position: relative;
+            z-index: 3;
+        }
+
+        &.fb {
+            background-color: $fb-color;
+        }
+
+        &.tw {
+            background-color: $tw-color;
+        }
+
+        &.insta {
+            background-color: $insta;
+        }
+
+        &.in {
+            background-color: $in;
+        }
+    }
+}
+
+/* aeneas effect */
+
+.effect.aeneas {
+    a {
+        transition: transform 0.4s linear 0s, border-top-left-radius 0.1s linear 0s,
+            border-top-right-radius 0.1s linear 0.1s, border-bottom-right-radius 0.1s linear 0.2s,
+            border-bottom-left-radius 0.1s linear 0.3s;
+
+        i {
+            transition: transform 0.4s linear 0s;
+        }
+
+        &:hover {
+            transform: rotate(360deg);
+            border-radius: 50%;
+
+            i {
+                transform: rotate(-360deg);
+            }
+        }
+    }
+}
+
+.container {
+    .row {
+        .List {
+            color: #fff;
+            ul {
+                line-height: 30px;
+                li {
+                    transition: all 0.3s;
+                    cursor: pointer;
+                    &:hover {
+                        color: rgb(2, 158, 248);
+                    }
+                }
+            }
+        }
+    }
+}

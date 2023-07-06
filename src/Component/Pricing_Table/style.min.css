@@ -1,0 +1,79 @@
+.container .heading {
+  color: #fff;
+}
+.container .heading h3 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.container .heading p {
+  font-size: 20px;
+}
+.container .row {
+  margin-top: 2rem;
+}
+.container .row .box {
+  background-color: rgba(61, 58, 58, 0.288);
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  color: #fff;
+}
+.container .row .box h4 {
+  margin-bottom: 2rem;
+  position: relative;
+}
+.container .row .box h4::after {
+  position: absolute;
+  content: "";
+  height: 3px;
+  bottom: -1rem;
+  background-color: rgba(33, 150, 243, 0.2588235294);
+  width: 80%;
+  left: 10%;
+}
+.container .row .box ul {
+  text-align: left;
+  padding-left: 2.5rem;
+}
+.container .row .box ul li {
+  margin-bottom: 1rem;
+}
+.container .row .box ul li i {
+  margin-right: 5px;
+}
+.container .row .box ul li .fa-check {
+  color: green;
+}
+.container .row .box ul li .fa-times {
+  color: red;
+}
+.container .row .box p {
+  font-size: 2rem;
+}
+.container .row .box p span {
+  font-size: 16px;
+}
+.container .row .box button {
+  display: block;
+  width: 70%;
+  margin: auto;
+  padding: 15px;
+  border-radius: 17px;
+  background: #3f51b5;
+  outline: none;
+  border: 0;
+  color: #fff;
+}
+.container .row .Premium {
+  background: #3f51b5;
+  transform: scale(1.1);
+}
+.container .row .Premium button {
+  background: #1f2128;
+}
+
+@media (max-width: 992px) {
+  .container .row .Premium {
+    transform: scale(1);
+  }
+}

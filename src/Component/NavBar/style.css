@@ -1,0 +1,103 @@
+.NavBar {
+  height: 70px;
+}
+.NavBar .Logo {
+  font-size: 25px;
+  color: #fff;
+}
+.NavBar .Logo span {
+  color: #2f80ed;
+}
+.NavBar .Links {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.NavBar .Links a {
+  color: #fff;
+  font-size: 20px;
+  margin: 0 15px;
+}
+.NavBar .Links a:hover {
+  text-decoration: none;
+}
+.NavBar .Links .active {
+  color: #2f80ed;
+}
+.NavBar .Links i {
+  display: none;
+}
+.NavBar .BurgarMenu {
+  display: none;
+  direction: rtl;
+}
+.NavBar .BurgarMenu span {
+  display: block;
+  background: #fff;
+  height: 3px;
+}
+.NavBar .BurgarMenu .up {
+  width: 30px;
+  background-color: #2f80ed;
+}
+.NavBar .BurgarMenu .down {
+  width: 30px;
+}
+
+@media (max-width: 768px) {
+  .NavBar .Links {
+    position: fixed;
+    background: #3f51b5;
+    z-index: 4;
+    right: 0;
+    height: 100vh;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0;
+    transform: translateX(100%);
+    transition: 0.3s;
+    width: 300px;
+  }
+  .NavBar .Links i {
+    display: unset;
+    position: absolute;
+    top: 4px;
+    left: 20px;
+    font-size: 2.5rem;
+    color: #fff;
+    cursor: pointer;
+  }
+  .NavBar .Links a {
+    color: #fff;
+    font-size: 25px;
+    margin: 20px 0;
+  }
+  .open {
+    transform: translateX(0%) !important;
+  }
+  .NavBar .BurgarMenu {
+    display: unset;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .NavBar .BurgarMenu:hover .up {
+    animation: toggle 0.4s infinite ease-in-out;
+  }
+  .NavBar .BurgarMenu:hover .down {
+    animation: toggle 0.4s infinite ease-in-out 0.2s;
+  }
+}
+@keyframes toggle {
+  100% {
+    width: 20px;
+  }
+  50% {
+    width: 50px;
+  }
+  100% {
+    width: 30px;
+  }
+}

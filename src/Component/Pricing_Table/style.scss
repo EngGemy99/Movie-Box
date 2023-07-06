@@ -1,0 +1,80 @@
+.container {
+    .heading {
+        color: #fff;
+        h3 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        p {
+            font-size: 20px;
+        }
+    }
+    .row {
+        margin-top: 2rem;
+        .box {
+            background-color: rgba(61, 58, 58, 0.288);
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            color: #fff;
+            h4 {
+                margin-bottom: 2rem;
+                position: relative;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    height: 3px;
+                    bottom: -1rem;
+                    background-color: #2196f342;
+                    width: 80%;
+                    left: 10%;
+                }
+            }
+            ul {
+                text-align: left;
+                padding-left: 2.5rem;
+                li {
+                    margin-bottom: 1rem;
+                    i {
+                        margin-right: 5px;
+                    }
+                    .fa-check {
+                        color: green;
+                    }
+                    .fa-times {
+                        color: red;
+                    }
+                }
+            }
+            p {
+                font-size: 2rem;
+                span {
+                    font-size: 16px;
+                }
+            }
+            button {
+                display: block;
+                width: 70%;
+                margin: auto;
+                padding: 15px;
+                border-radius: 17px;
+                background: #3f51b5;
+                outline: none;
+                border: 0;
+                color: #fff;
+            }
+        }
+        .Premium {
+            background: #3f51b5;
+            button {
+                background: #1f2128;
+            }
+            transform: scale(1.1);
+        }
+    }
+}
+@media (max-width: 992px) {
+    .container .row .Premium {
+        transform: scale(1);
+    }
+}
